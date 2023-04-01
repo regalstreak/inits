@@ -1,0 +1,23 @@
+{
+	"name": "inits",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon -I -q --exec node --experimental-specifier-resolution=node --loader ts-node/esm index.ts",
+		"prod": "yarn build && yarn start",
+		"build": "tsc",
+		"start": "node dist/index.js"
+	},
+	"private": true,
+	"devDependencies": {
+		"@types/node": "^18.15.11",
+		"nodemon": "^2.0.22",
+		"prettier": "^2.8.7",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.0.3"
+	},
+	"dependencies": {
+		"dotenv": "^16.0.3"
+	}
+}
